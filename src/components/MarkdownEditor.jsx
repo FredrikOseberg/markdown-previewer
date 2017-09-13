@@ -32,24 +32,26 @@ class MarkdownEditor extends Component {
 		this.setState({ markdown: markdown });
 	}
 	fullscreenPreviewer() {
-		this.setState({ markdownPreviewFullscreen: !this.state.markdownPreviewFullscreen });
-		if (this.state.markdownPreviewFullscreen) {
-			this.setState({ markdownPreviewStyle: 'visible fullscreen' });
-			this.setState({ markdownEditorStyle: 'markdown--editor' });
-		} else {
-			this.setState({ markdownPreviewStyle: 'visible' });
-			this.setState({ markdownEditorStyle: 'markdown--editor flex' });
-		}
+		this.setState({ markdownPreviewFullscreen: !this.state.markdownPreviewFullscreen }, () => {
+			if (this.state.markdownPreviewFullscreen) {
+				this.setState({ markdownPreviewStyle: 'visible fullscreen' });
+				this.setState({ markdownEditorStyle: 'markdown--editor' });
+			} else {
+				this.setState({ markdownPreviewStyle: 'visible' });
+				this.setState({ markdownEditorStyle: 'markdown--editor flex' });
+			}
+		});
 	}
 	fullscreenEditor() {
-		this.setState({ markdownEditorFullscreen: !this.state.markdownEditorFullscreen });
-		if (this.state.markdownEditorFullscreen) {
-			this.setState({ markdownEditorStyle: 'markdown--editor flex fullscreen' });
-			this.setState({ markdownPreviewStyle: '' });
-		} else {
-			this.setState({ markdownEditorStyle: 'markdown--editor flex' });
-			this.setState({ markdownPreviewStyle: 'visible' });
-		}
+		this.setState({ markdownEditorFullscreen: !this.state.markdownEditorFullscreen }, () => {
+			if (this.state.markdownEditorFullscreen) {
+				this.setState({ markdownEditorStyle: 'markdown--editor flex fullscreen' });
+				this.setState({ markdownPreviewStyle: '' });
+			} else {
+				this.setState({ markdownEditorStyle: 'markdown--editor flex' });
+				this.setState({ markdownPreviewStyle: 'visible' });
+			}
+		});
 	}
 	render() {
 		return (

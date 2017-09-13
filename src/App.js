@@ -4,13 +4,13 @@ import './App.css';
 import MarkdownEditor from './components/MarkdownEditor';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <MarkdownEditor />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="App">
+				<MarkdownEditor />
+			</div>
+		);
+	}
 }
 
 export default App;

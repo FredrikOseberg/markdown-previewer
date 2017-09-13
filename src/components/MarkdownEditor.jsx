@@ -52,7 +52,6 @@ class MarkdownEditor extends Component {
 		}
 	}
 	render() {
-		const markdownMarkup = this.state.markdown;
 		return (
 			<div className="markdown--wrapper">
 				<div className={this.state.markdownEditorStyle}>

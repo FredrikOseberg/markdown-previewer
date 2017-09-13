@@ -1,0 +1,17 @@
+@import './components/markdownEditor.scss';
+@import './components/markdownPreviewer.scss';
+
+#root {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffb97c;
+}
+
+.App {
+  width: 100%;
+}
+
+

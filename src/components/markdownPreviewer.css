@@ -1,0 +1,48 @@
+#preview {
+  color: #fff;
+  width: 80%;
+  margin: 10px;
+  max-width: 600px;
+  display: none;
+  transition: all 0.5s ease; }
+  #preview h1,
+  #preview h2,
+  #preview h3,
+  #preview h4,
+  #preview h5,
+  #preview h6 {
+    margin-top: 0; }
+  #preview .markdown--preview--header {
+    background-color: #ededed;
+    height: 30px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    #preview .markdown--preview--header .fa-ellipsis-h {
+      margin-left: 10px;
+      font-size: 1.2em; }
+    #preview .markdown--preview--header .fa-arrows-alt {
+      font-size: 1.1em;
+      margin-right: 10px; }
+      #preview .markdown--preview--header .fa-arrows-alt:hover {
+        cursor: pointer; }
+  #preview .markdown--preview--content {
+    padding: 10px;
+    text-align: left;
+    background-color: #565555;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    min-height: 280px;
+    height: 100%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); }
+
+#preview.fullscreen {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%; }
+
+#preview.visible {
+  display: block; }
